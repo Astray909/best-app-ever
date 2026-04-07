@@ -3,6 +3,7 @@ import { AuthProvider } from './context/AuthContext'
 import Layout from './components/Layout'
 import ProtectedRoute from './components/ProtectedRoute'
 import HomePage from './pages/HomePage'
+import FoodIdeasPage from './pages/FoodIdeasPage'
 import NotFoundPage from './pages/NotFoundPage'
 
 function App() {
@@ -14,6 +15,9 @@ function App() {
           <Route path="/home" element={<Layout />}>
             <Route index element={<HomePage />} />
             {/* Future protected routes go here */}
+          </Route>
+          <Route path="/foodIdeas" element={<Layout />}>
+            <Route index element={<FoodIdeasPage />} />
           </Route>
           <Route element={<Layout />}>
             <Route

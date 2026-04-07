@@ -1,0 +1,84 @@
+.food-page h1 {
+  margin: 0 0 32px;
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.food-unauth {
+  color: var(--text-muted);
+}
+
+.food-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 560px;
+}
+
+.food-row {
+  display: flex;
+  gap: 16px;
+}
+
+.food-row .food-label {
+  flex: 1;
+}
+
+.food-label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.food-input,
+.food-textarea {
+  padding: 10px 12px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  color: var(--text);
+  font-size: 15px;
+  font-family: inherit;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.food-input:focus,
+.food-textarea:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(255, 102, 0, 0.12);
+}
+
+.food-textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.food-submit {
+  align-self: flex-start;
+  padding: 10px 28px;
+  background: var(--accent);
+  border: none;
+  border-radius: 8px;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.food-submit:hover {
+  background: var(--accent-hover);
+}
+
+@media (max-width: 480px) {
+  .food-row {
+    flex-direction: column;
+  }
+}
