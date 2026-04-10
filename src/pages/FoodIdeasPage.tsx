@@ -12,14 +12,18 @@ export default function FoodIdeasPage() {
   if (loading) return null
   if (!user) return <p className="food-unauth">Sign in to use this page.</p>
 
-  function handleSubmit(e: React.FormEvent) {
+  async function handleSubmit(e: React.FormEvent) {
     e.preventDefault()
 
     const dateTimeUtc = date && time
       ? new Date(`${date}T${time}`).toISOString()
       : null
 
-    console.log(JSON.stringify({ dateTimeUtc, title, body }, null, 2))
+    await fetch(`${import.meta.env.VITE_API_BASE_URL}/datePlanSubmit`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ dateTimeUtc, title, body }),
+    })
   }
 
   return (
