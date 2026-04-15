@@ -77,6 +77,35 @@
   background: var(--accent-hover);
 }
 
+.food-success {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: #22c55e;
+}
+
+.food-error {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: #ef4444;
+}
+
+.food-input-error {
+  border-color: #ef4444;
+}
+
+.food-input-error:focus {
+  border-color: #ef4444;
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.12);
+}
+
+.food-field-error {
+  font-size: 12px;
+  font-weight: 500;
+  color: #ef4444;
+}
+
 @media (max-width: 480px) {
   .food-row {
     flex-direction: column;
