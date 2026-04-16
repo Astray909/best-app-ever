@@ -158,6 +158,17 @@
   border-right: 1px solid var(--border);
   overflow: hidden;
   transition: width var(--transition);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.sidebar-version {
+  padding: 12px 20px;
+  font-size: 12px;
+  color: var(--text-muted);
+  white-space: nowrap;
+  border-top: 1px solid var(--border);
 }
 
 .sidebar ul {

@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import { NavLink, Outlet } from 'react-router-dom'
 import { useAuth } from '../context/AuthContext'
+import { version } from '../../package.json'
 import './Layout.css'
 
 function getInitialTheme(): 'light' | 'dark' | 'system' {
@@ -55,6 +56,7 @@ export default function Layout() {
             <li><NavLink to="/bday">Birthday girl click here</NavLink></li>
           </>}
         </ul>
+        <div className="sidebar-version">v{version}</div>
       </nav>
 
       {/* Main Content */}
