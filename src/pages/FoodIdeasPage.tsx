@@ -60,7 +60,7 @@ export default function FoodIdeasPage() {
 
     const dateTimeUtc = date && time
       ? new Date(`${date}T${time}`).toISOString()
-      : new Date(date).toISOString()
+      : new Date(`${date}T00:00`).toISOString()
 
     try {
       const res = await fetch(`${import.meta.env.VITE_API_BASE_URL}/datePlanSubmit`, {
@@ -178,5 +178,5 @@ export default function FoodIdeasPage() {
 function formatDate(iso: string): string {
   const d = new Date(iso)
   if (isNaN(d.getTime())) return iso
-  return d.toLocaleDateString(undefined, { weekday: 'short', month: 'short', day: 'numeric', year: 'numeric' })
+  return d.toLocaleString(undefined, { weekday: 'short', month: 'short', day: 'numeric', year: 'numeric', hour: 'numeric', minute: '2-digit' })
 }
