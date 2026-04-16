@@ -28,6 +28,7 @@ export default function Layout() {
 
   const themeLabel = theme === 'system' ? '🖥 Auto' : theme === 'light' ? '☀ Light' : '🌙 Dark'
   const { user, signOutUser } = useAuth()
+  const isBdayVisible = new Date() >= new Date('2026-04-22')
 
   return (
     <div className={`layout ${sidebarOpen ? 'sidebar-open' : 'sidebar-closed'}`}>
@@ -53,7 +54,7 @@ export default function Layout() {
           <li><NavLink to="/home" end>Home</NavLink></li>
           {user && <>
             <li><NavLink to="/foodIdeas">What to Eat?</NavLink></li>
-            <li><NavLink to="/bday">Birthday girl click here</NavLink></li>
+            {isBdayVisible && <li><NavLink to="/bday">Birthday girl click here</NavLink></li>}
           </>}
         </ul>
         <div className="sidebar-version">v{version}</div>
