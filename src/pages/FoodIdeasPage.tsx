@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { collection, onSnapshot, orderBy, query } from 'firebase/firestore'
 import { useAuth } from '../context/AuthContext'
-import { db } from '../firebase'
+import { db } from '../firebase-firestore'
 import './FoodIdeasPage.css'
 
 interface DatePlan {
@@ -154,6 +154,8 @@ export default function FoodIdeasPage() {
                 />
                 {fieldErrors.date && <span className="food-field-error">{fieldErrors.date}</span>}
               </label>
+            </div>
+            <div className="food-row">
               <label className="food-label">
                 Time
                 <input
