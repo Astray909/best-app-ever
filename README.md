@@ -71,3 +71,9 @@ export default defineConfig([
   },
 ])
 ```
+
+```bash
+npm install
+npm run build
+firebase deploy
+```
