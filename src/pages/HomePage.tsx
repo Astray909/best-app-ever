@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 import { useAuth } from '../context/AuthContext'
 import './HomePage.css'
 
-const isBdayVisible = new Date() >= new Date('2026-04-22')
+const isBdayVisible = new Date() >= new Date('2026-04-18')
 
 const links = [
   { to: '/foodIdeas', label: 'What to Eat?' },

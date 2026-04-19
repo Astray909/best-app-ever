@@ -1,0 +1,85 @@
+.bday-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  min-height: 60vh;
+}
+
+.bday-img {
+  width: 260px;
+  height: 260px;
+  object-fit: contain;
+}
+
+.bday-btn {
+  padding: 1.2rem 2.4rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #ff6eb4, #ff9f43);
+  color: #fff;
+  cursor: pointer;
+  transition: transform 0.1s, box-shadow 0.1s;
+  box-shadow: 0 4px 16px rgba(255, 110, 180, 0.4);
+}
+
+.bday-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 110, 180, 0.5);
+}
+
+.bday-btn:active {
+  transform: translateY(0);
+}
+
+.bday-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+}
+
+.bday-dialog {
+  background: #fff;
+  border-radius: 16px;
+  padding: 2.5rem 3rem;
+  text-align: center;
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.2);
+}
+
+.bday-message {
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0 0 1rem;
+  color: #ff6eb4;
+}
+
+.bday-note {
+  font-size: 1rem;
+  color: #555;
+  margin: 0 0 1.5rem;
+  min-height: 3rem;
+  max-width: 280px;
+  line-height: 1.6;
+  white-space: pre-wrap;
+}
+
+.bday-close {
+  padding: 0.6rem 1.8rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  background: #ff6eb4;
+  color: #fff;
+  cursor: pointer;
+}
+
+.bday-close:hover {
+  background: #e55aa0;
+}
