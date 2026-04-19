@@ -46,7 +46,7 @@
 }
 
 .bday-dialog {
-  background: #fff;
+  background: #676767;
   border-radius: 16px;
   padding: 2.5rem 3rem;
   text-align: center;
@@ -58,14 +58,19 @@
   font-weight: 700;
   margin: 0 0 1rem;
   color: #ff6eb4;
+  line-height: 1.5;
+}
+
+.bday-name {
+  cursor: pointer;
 }
 
 .bday-note {
   font-size: 1rem;
-  color: #555;
-  margin: 0 0 1.5rem;
+  color: #fff;
+  margin: 0 auto 1.5rem;
   min-height: 3rem;
-  max-width: 280px;
+  max-width: 85vw;
   line-height: 1.6;
   white-space: pre-wrap;
 }
