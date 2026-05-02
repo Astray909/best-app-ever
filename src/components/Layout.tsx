@@ -11,6 +11,14 @@ function getInitialTheme(): 'light' | 'dark' | 'system' {
 export default function Layout() {
   const [sidebarOpen, setSidebarOpen] = useState(true)
   const [theme, setTheme] = useState<'light' | 'dark' | 'system'>(getInitialTheme)
+  const [backendVersion, setBackendVersion] = useState<string | null>(null)
+
+  useEffect(() => {
+    fetch(`${import.meta.env.VITE_API_BASE_URL}/`)
+      .then(r => r.json())
+      .then(data => setBackendVersion(data.version))
+      .catch(() => {})
+  }, [])
 
   useEffect(() => {
     const root = document.documentElement
@@ -57,7 +65,10 @@ export default function Layout() {
             {isBdayVisible && <li><NavLink to="/bday">Birthday girl click here</NavLink></li>}
           </>}
         </ul>
-        <div className="sidebar-version">v{version}</div>
+        <div className="sidebar-version">
+          <div>UI v{version}</div>
+          {backendVersion && <div>API v{backendVersion}</div>}
+        </div>
       </nav>
 
       {/* Main Content */}
