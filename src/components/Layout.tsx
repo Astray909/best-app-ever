@@ -62,6 +62,7 @@ export default function Layout() {
           <li><NavLink to="/home" end>Home</NavLink></li>
           {user && <>
             <li><NavLink to="/foodIdeas">What to Eat?</NavLink></li>
+            <li><NavLink to="/activityIdeas">What to Do?</NavLink></li>
             {isBdayVisible && <li><NavLink to="/bday">Birthday girl click here</NavLink></li>}
           </>}
         </ul>

@@ -6,6 +6,7 @@ import ProtectedRoute from './components/ProtectedRoute'
 
 const HomePage = lazy(() => import('./pages/HomePage'))
 const FoodIdeasPage = lazy(() => import('./pages/FoodIdeasPage'))
+const ActivityIdeasPage = lazy(() => import('./pages/ActivityIdeasPage'))
 const BdayPage = lazy(() => import('./pages/BdayPage'))
 const NotFoundPage = lazy(() => import('./pages/NotFoundPage'))
 
@@ -22,6 +23,9 @@ function App() {
             </Route>
             <Route path="/foodIdeas" element={<Layout />}>
               <Route index element={<FoodIdeasPage />} />
+            </Route>
+            <Route path="/activityIdeas" element={<Layout />}>
+              <Route index element={<ActivityIdeasPage />} />
             </Route>
             <Route path="/bday" element={<Layout />}>
               <Route index element={<BdayPage />} />

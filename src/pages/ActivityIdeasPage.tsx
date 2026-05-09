@@ -1,14 +1,14 @@
 import IdeasManager from '../components/IdeasManager'
 
-export default function FoodIdeasPage() {
+export default function ActivityIdeasPage() {
   return (
     <IdeasManager
-      pageTitle="What to Eat?"
-      ideaType="eat"
+      pageTitle="What to Do?"
+      ideaType="do"
       submitToggleLabel="Submit an Idea"
       titleLabel="Thing or Place"
-      titlePlaceholder="e.g. Chicken Salsa at Home"
-      notesPlaceholder="Loooooooots of chicken!!!"
+      titlePlaceholder="e.g. Pooping at Home"
+      notesPlaceholder="Lots of fibre!"
       titleRequiredMessage="Thing or Place is required."
     />
   )
