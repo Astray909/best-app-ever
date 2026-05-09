@@ -6,6 +6,7 @@ const isBdayVisible = new Date() >= new Date('2026-04-22')
 
 const links = [
   { to: '/foodIdeas', label: 'What to Eat?' },
+  { to: '/activityIdeas', label: 'What to Do?' },
   ...(isBdayVisible ? [{ to: '/bday', label: 'Birthday girl click here' }] : []),
 ]
 
